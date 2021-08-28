@@ -63,7 +63,7 @@ const StyledLink = styled(Link)`
   &&& {
     cursor: pointer;
     text-decoration: underline;
-    color: black;
+    color: #0177b7;
   }
 `;
 
