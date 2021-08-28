@@ -8,7 +8,7 @@ const HeaderOptionsItem = () => {
 
   return (
     <StyledContainer onClick={signOut}>
-      <StyledAvatar src={user?.photoURL} alt="avatar">
+      <StyledAvatar src={user?.photoURL || undefined} alt="avatar">
         {user?.email[0]}
       </StyledAvatar>
       <StyledTitle>Me</StyledTitle>

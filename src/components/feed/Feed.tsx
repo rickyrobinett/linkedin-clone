@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FeedInput from "./FeedInput";
 import FeedOptions from "./FeedOptions";
+import FeedPosts from "./FeedPosts";
 
 const Feed = () => {
   return (
@@ -9,6 +10,7 @@ const Feed = () => {
         <FeedInput />
         <FeedOptions />
       </StyledTop>
+      <FeedPosts />
     </StyledContainer>
   );
 };

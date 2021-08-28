@@ -50,7 +50,6 @@ const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 6.25rem 0;
 `;
 
 const StyledText = styled.h4``;

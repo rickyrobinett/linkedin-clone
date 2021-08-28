@@ -8,10 +8,10 @@ import {
   updateProfile,
   User as FirebaseUser,
 } from "firebase/auth";
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, reaction } from "mobx";
 import { toast } from "react-toastify";
 import { User } from "types/user";
-import { resetStore } from "./store";
+import { resetStore, store } from "./store";
 
 class UserStore {
   user: User | null = null;
@@ -19,6 +19,15 @@ class UserStore {
 
   constructor() {
     makeAutoObservable(this);
+
+    reaction(
+      () => this.user,
+      (user) => {
+        if (user) {
+          store.postStore.loadPosts();
+        }
+      }
+    );
   }
 
   reset = () => {
@@ -70,7 +79,7 @@ class UserStore {
       this.user = {
         email: user.email!,
         displayName: user.displayName!,
-        photoURL: user.photoURL!,
+        photoURL: user.photoURL,
       };
     } else {
       this.user = null;

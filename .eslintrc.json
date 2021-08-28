@@ -23,7 +23,8 @@
     "react/react-in-jsx-scope": "off",
     "no-invalid-this": "off",
     "react/prop-types": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/display-name": "off"
   },
   "settings": {
     "react": {

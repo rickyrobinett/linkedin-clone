@@ -1,18 +1,30 @@
 import styled from "styled-components";
 import CreateIcon from "@material-ui/icons/Create";
 import { useRef } from "react";
+import { useStore } from "stores/store";
+import { toast } from "react-toastify";
 
 const FeedInput = () => {
+  const { createPost } = useStore().postStore;
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!inputRef.current?.value || inputRef.current.value === "") {
       return;
     }
 
-    inputRef.current.value = "";
+    if (inputRef.current.value.length > 500) {
+      toast.error("Message is too long. Max 500 characters.");
+      return;
+    }
+
+    const success = await createPost(inputRef.current.value);
+
+    if (success) {
+      inputRef.current.value = "";
+    }
   };
 
   return (

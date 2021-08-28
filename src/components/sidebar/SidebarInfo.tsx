@@ -8,7 +8,9 @@ const SidebarInfo = () => {
 
   return (
     <>
-      <StyledAvatar src={user?.photoURL}>{user?.email[0]}</StyledAvatar>
+      <StyledAvatar src={user?.photoURL || undefined}>
+        {user?.email[0]}
+      </StyledAvatar>
       <StyledName>{user?.displayName}</StyledName>
       <StyledEmail>{user?.email}</StyledEmail>
     </>
@@ -19,6 +21,7 @@ export default observer(SidebarInfo);
 
 const StyledAvatar = styled(Avatar)`
   margin-bottom: 0.75rem;
+  text-transform: uppercase;
 `;
 
 const StyledName = styled.h2`
