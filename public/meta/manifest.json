@@ -1,0 +1,14 @@
+{
+  "name": "LinkedIn Clone",
+  "short_name": "LinkedIn Clone",
+  "icons": [
+    {
+      "src": "/meta/icon.png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "https://linkedin-clone-martstech.vercel.app"
+}
