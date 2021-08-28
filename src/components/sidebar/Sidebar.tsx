@@ -36,7 +36,7 @@ const StyledContainer = styled.div`
   height: fit-content;
   margin-right: 1.25rem;
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
