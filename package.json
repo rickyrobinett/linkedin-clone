@@ -33,7 +33,7 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.13",
+    "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
