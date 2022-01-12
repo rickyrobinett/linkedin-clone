@@ -4,13 +4,7 @@ import styled from "styled-components";
 const HeaderLogo = () => {
   return (
     <StyledContainer>
-      <Image
-        src="/images/logo.svg"
-        height={40}
-        width={40}
-        objectFit="contain"
-        alt="logo"
-      />
+      <h1>Hi Alicia</h1>
     </StyledContainer>
   );
 };
